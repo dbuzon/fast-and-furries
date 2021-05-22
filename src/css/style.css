@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'RobotoS';
+    src: url('../font/RobotoSlab.woff') format('woff');
+}
+
+p, h1, a{
+    font-family: 'RobotoS';
+}
+
+.navbar-top{
+    width: 100%;
+    height: 80px;
+    background-color: #FF6DA1;
+}
+
+.navbar-bottom{
+    width: 100%;
+    height: 40px;
+    background-color: #FCE0E8;
+    text-align: center;
+}
+
+.navbar-bottom a{
+    font-size: 16px;
+    color: #202020;
+    text-decoration: none;
+    margin:0 10px;
+    line-height: 40px;
+}
+
+.navbar-bottom a:hover{
+    color:#e94c88;
+    border-bottom: 1px solid #e94c88;
+}
+
+.navbar-title{
+    font-size: 29px;
+    line-height: 80px;
+    font-weight: bold;
+    color:white;
+    float:left;
+}
+
+.navbar-menu{
+    font-size: 20px;
+    float:right;
+    line-height: 80px;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-menu a{
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+}
