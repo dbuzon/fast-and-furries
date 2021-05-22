@@ -1,5 +1,12 @@
 # Fast & Furious
-Projeto da disciplina Introdução ao Desenvolvimento Web - SCC0219
+Projeto da disciplina Introdução ao Desenvolvimento Web - SCC0219.
+
+### Autores
+10851687	Débora Buzon da Silva <br>
+11275147	Dikson Ferreira dos Santos <br>
+10288720	Felipe de Souza Lincoln <br>
+10716960	Fernando de Souza Lincoln <br>
+
 
 ## 1. Requisitos
 ## 2. Descrição do Projeto
