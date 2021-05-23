@@ -6,15 +6,69 @@
 :root {
     --rosa: #FF6DA1;
     --rosa-escuro: #e94c88;
+    --rosa-escuro2: #da3776;
+    --rosa-escuro3: #c92061;
     --rosa-claro: #FCE0E8;
     --preto: #333;
 }
+
+/* Default link style */
+a{
+    color: var(--rosa);
+}
+
+a:hover{
+    color: var(--rosa-escuro);
+}
+
+/* Default input[type="text|password"] style */
+input[type="text"], input[type="password"]{
+    border-radius: 0;
+    border:1px solid #ccc;
+    padding:5px 10px;
+}
+
+/* Default input[type="submit"] style */
+input[type="submit"]{
+    border-radius: 0;
+    color:white;
+    background-color:var(--rosa);
+    border:none;
+    padding:6px 18px;
+    text-align: center;
+    border-bottom: 3px solid var(--rosa-escuro2);
+}
+input[type="submit"]:active{
+    border-top: 3px solid white;
+    border-bottom: none;
+}
+input[type="submit"]:hover{
+    background-color: var(--rosa-escuro);
+    border-bottom-color: var(--rosa-escuro3);
+}
+
+/* Wiggle on hover */
+.wiggle{
+    display: inline-block;
+}
+.wiggle:hover {
+    animation: shake 0.6s;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes shake {
+    0% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+    100% { transform: rotate(-2deg); }
+}
+
+
 
 p{
     font-size: 1em;
 }
 
-p, h1, h2, h3, a{
+p, h1, h2, h3, a, input, span{
     font-family: 'RobotoS';
 }
 
@@ -73,14 +127,14 @@ body{
     text-decoration: none;
 }
 
-.shopping-cart i{
+.shopping-cart{
     margin-right: 50px;
     font-size: 30px;
 }
 
 .shopping-cart::before{
     position: absolute;
-    top:10px;
+    top:15px;
     margin-left: 25px;
     border-radius: 100%;
     content: "4";
@@ -133,3 +187,5 @@ body{
 .footer a{
     color: white;
 }
+
+
