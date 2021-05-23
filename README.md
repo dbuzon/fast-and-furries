@@ -7,6 +7,7 @@ Projeto da disciplina Introdução ao Desenvolvimento Web - SCC0219.
 10716960	Fernando de Souza Lincoln <br>
 
 ## 1. Requisitos
+
 Nosso projeto é desenvolver um website de um petshop virtual, que vende produtos como (mas não limitado a) brinquedos e acessórios destinados à bichinhos de estimação.
 
 ## 2. Descrição do Projeto
@@ -28,7 +29,7 @@ Também pode ser acessado nos links abaixo:
 
 As funcionalidades visadas através das telas de mockup são:
 
-- Login com email e senha na plataforma.
+- Login com email e senha na plataforma, com opção de criar uma nova conta.
 - Visualização das informações do cliente, com opção de alterar cadastro.
 - Acesso à homepage, com visualização de alguns produtos selecionados pela loja.
 - Visualização de um produto, com seu nome, descrição, preço e botão para adicionar ao carrinho.
@@ -36,7 +37,20 @@ As funcionalidades visadas através das telas de mockup são:
 - Opção de inserir informações do cartão de crédito para efetuar o pagamento.
 - Opção de alterar o endereço de entrega.
 
+### Servidor
+
+As informações salvas no servidor seriam:
+
+- Cadastro do cliente
+  - Informações de login: Email, Senha (não em plain text, claro)
+  - Informações pessoais: Nome, CPF, Endereço, Número de telefone)
+  - Produtos no carrinho
+  - Histórico de compras
+ 
+
 ## 3. Comentários sobre o código
+
+Usamos bootstrap para facilitar a implementação de um layout responsivo.
 
 ## 4. Plano de teste
 
@@ -50,4 +64,4 @@ Um dos problemas identificados inicialmente foi uma certa dificuldade de traduzi
 
 ## 8. Comentários
 
-Os mockups foram feitos usando a ferramenta Figma. 
+Os mockups foram feitos usando a ferramenta Figma.
