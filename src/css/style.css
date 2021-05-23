@@ -104,6 +104,7 @@ body{
 .navbar-bottom a:hover{
     color: var(--rosa-escuro);
     border-bottom: 1px solid  var(--rosa-escuro);
+    transition: all 0.5s;
 }
 
 .navbar-title{
@@ -175,10 +176,11 @@ body{
 }
 
 .footer hr{
+    height: 0.5px;
     margin-top: 15px;
     margin-bottom: 15px;
     color: #fff;
-    opacity: .5;
+    opacity: 0.5;
 }
 .footer ul{
     padding-left: 0;
