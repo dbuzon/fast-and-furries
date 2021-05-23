@@ -1,4 +1,4 @@
-# Fast & Furious
+# Fast & Furries
 Projeto da disciplina Introdução ao Desenvolvimento Web - SCC0219.
 
 ### Autores
