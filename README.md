@@ -11,9 +11,11 @@ Nosso projeto é desenvolver um website de um petshop virtual, que vende produto
 
 ## 2. Descrição do Projeto
 
-Diagrama de navegação:
+### Diagrama de navegação:
+
 <img src="https://github.com/dbuzon/ProjetoWeb/blob/master/mockups/navigationDiagram.png" width=600px>
-As imagens do mockup (feito usando a ferramenta Figma) estão na pasta `/mockups`. 
+
+As imagens do mockup estão na pasta `/mockups`. 
 Também pode ser acessado nos links abaixo:
 - [Homepage](/mockups/Homepage.png)
   - [Produto](/mockups/Produto.png)
@@ -21,6 +23,18 @@ Também pode ser acessado nos links abaixo:
 - [Perfil do Cliente](/mockups/PerfildoCliente.png)
 - [Carrinho](/mockups/carrinho.png)
   - [Finalizar Compra](/mockups/FinalizarCompra.png)
+
+### Funcionalidades
+
+As funcionalidades visadas através das telas de mockup são:
+
+- Login com email e senha na plataforma.
+- Visualização das informações do cliente, com opção de alterar cadastro.
+- Acesso à homepage, com visualização de alguns produtos selecionados pela loja.
+- Visualização de um produto, com seu nome, descrição, preço e botão para adicionar ao carrinho.
+- Acesso ao carrinho de compras, com opção de mudar a quantidade de itens, conferir o preço total e finalizar compra.
+- Opção de inserir informações do cartão de crédito para efetuar o pagamento.
+- Opção de alterar o endereço de entrega.
 
 ## 3. Comentários sobre o código
 
@@ -32,4 +46,8 @@ Também pode ser acessado nos links abaixo:
 
 ## 7. Problemas
 
+Um dos problemas identificados inicialmente foi uma certa dificuldade de traduzir as imagens do mockup para código HTML e CSS, por causa da falta de padronização do tamanho das fontes entre as telas feitas no mockup.
+
 ## 8. Comentários
+
+Os mockups foram feitos usando a ferramenta Figma. 
