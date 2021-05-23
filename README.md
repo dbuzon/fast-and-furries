@@ -1,5 +1,8 @@
 # Fast & Furries
+
 Projeto da disciplina Introdução ao Desenvolvimento Web - SCC0219.
+
+O tema escolhido por nós foi desenvolver um website de um petshop virtual, que vende produtos como (mas não limitado a) brinquedos e acessórios destinados à bichinhos de estimação.
 
 ### Autores
 10851687	Débora Buzon da Silva <br>
@@ -8,9 +11,55 @@ Projeto da disciplina Introdução ao Desenvolvimento Web - SCC0219.
 
 ## 1. Requisitos
 
-Nosso projeto é desenvolver um website de um petshop virtual, que vende produtos como (mas não limitado a) brinquedos e acessórios destinados à bichinhos de estimação.
+The system must have 2 types of users: Clients and Administrators
+
+Administrators are responsible for registering/managing administrators, customers, and products/services provided. The application already comes with an account admin with password admin.
+
+Customers are users who access the system to buy products/services.
+
+The admin record includes, at least: name, id, phone, email.
+
+Each customer's record includes, at least: name, id, address, phone, email
+
+Product/services records include, at least: name, id, photo, description, price, quantity (in stock), quantity sold.
+
+Your store may sell products, services or both (you decide)
+
+Selling Products (or services): Products are selected, their quantity chosen, and are included in a cart. Products are purchased using a credit card number (any number is accepted by the system). The quantity of product sold is subtracted from the quantity in stock and added to the quantity sold. Carts are emptied only on payment or by customers.
+
+Product/Service Management: Administrators can create/update/read/delete (crud) new products and services. For example, they can change the stock quantity.
+
+Your functionality: Create a functionality that is specific to your application. It does not have to be something complicated. For instance, if you are selling cars, you may allow users to use an accelerator to hear how each car engine roars up and down.   
+
+The system must provide accessibility requirements and provide good usability. The system must be responsive
+
+------
+
+O sistema deve ter 2 tipos de usuários: clientes e administradores (que ainda precisa ser implementado).
+
+Os administradores são responsáveis por registrar/gerenciar administradores, clientes e produtosfornecidos. O aplicativo já vem com uma conta `admin` com senha `admin`.
+
+Clientes são usuários que acessam o sistema para comprar produtos.
+
+O registro do administrador contém nome, CPF, telefone e e-mail.
+
+O registro de cada cliente contém nome, CPF, endereço, telefone e e-mail.
+
+Os registros de produto incluem nome, id, foto, descrição, preço, quantidade (em estoque), quantidade vendida.
+
+Venda de produtos: Os produtos são selecionados, sua quantidade escolhida e são incluídos em um carrinho. Os produtos são comprados usando um número de cartão de crédito (qualquer número é aceito pelo sistema). A quantidade de produto vendida é subtraída da quantidade em estoque e adicionada à quantidade vendida. Os carrinhos são esvaziados somente mediante pagamento ou pelos clientes.
+
+Gerenciamento de produto: os administradores podem criar/atualizar/ler/excluir (crud) novos produtos e serviços. Por exemplo, eles podem alterar a quantidade em estoque.
+
+Sua funcionalidade: Crie uma funcionalidade que seja específica para seu aplicativo. Não precisa ser algo complicado. Por exemplo, se você está vendendo carros, pode permitir que os usuários usem um acelerador para ouvir como o motor de cada carro sobe e desce.
+
+O sistema deve fornecer requisitos de acessibilidade e boa usabilidade. O sistema deve ser responsivo
+
+
 
 ## 2. Descrição do Projeto
+
+Fast & Furries é um petshop virtual, implementado com HTML e CSS (até agora)
 
 ### Diagrama de navegação:
 
@@ -39,7 +88,7 @@ As funcionalidades visadas através das telas de mockup são:
 
 ### Servidor
 
-As informações salvas no servidor seriam:
+No atual estado do nosso site, as informações salvas no servidor atualmente seriam:
 
 - Cadastro do cliente
   - Informações de login: Email, Senha (não em plain text, claro)
