@@ -47,23 +47,6 @@ input[type="submit"]:hover{
     border-bottom-color: var(--rosa-escuro3);
 }
 
-/* Wiggle on hover */
-.wiggle{
-    display: inline-block;
-}
-.wiggle:hover {
-    animation: shake 0.6s;
-    animation-iteration-count: infinite;
-}
-  
-@keyframes shake {
-    0% { transform: rotate(-2deg); }
-    50% { transform: rotate(2deg); }
-    100% { transform: rotate(-2deg); }
-}
-
-
-
 p{
     font-size: 1em;
 }
@@ -128,10 +111,16 @@ body{
     text-decoration: none;
 }
 
+.navbar-menu a:hover {
+    color: var(--rosa-claro);
+    transition: 0.5s;
+}
+
 .shopping-cart{
     margin-right: 50px;
     font-size: 30px;
 }
+
 
 .shopping-cart::before{
     position: absolute;
