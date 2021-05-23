@@ -23,14 +23,14 @@ a:hover{
 
 /* Default input[type="text|password"] style */
 input[type="text"], input[type="password"]{
-    border-radius: 0;
+    border-radius: 3px;
     border:1px solid #ccc;
     padding:5px 10px;
 }
 
 /* Default input[type="submit"] style */
 input[type="submit"]{
-    border-radius: 0;
+    border-radius: 3px;
     color:white;
     background-color:var(--rosa);
     border:none;
