@@ -13,7 +13,7 @@ O tema escolhido por nós foi desenvolver um website de um petshop virtual.
 
 O sistema deve ter 2 tipos de usuários: clientes e administradores (o segundo ainda precisa ser implementado).
 
-Os administradores são responsáveis por registrar/gerenciar administradores, clientes e produtosfornecidos. O aplicativo já vem com uma conta `admin` com senha `admin`.
+Os administradores são responsáveis por registrar/gerenciar administradores, clientes e produtos fornecidos. O aplicativo já vem com uma conta `admin` com senha `admin`.
 
 Clientes são usuários que acessam o sistema para comprar produtos.
 
@@ -23,9 +23,9 @@ O registro de cada cliente contém nome, CPF, endereço, telefone e e-mail.
 
 Os registros de produto incluem nome, id, foto, descrição, preço, quantidade (em estoque), quantidade vendida.
 
-Venda de produtos: Os produtos são selecionados, sua quantidade escolhida e são incluídos em um carrinho. Os produtos são comprados usando um número de cartão de crédito (qualquer número é aceito pelo sistema). A quantidade de produto vendida é subtraída da quantidade em estoque e adicionada à quantidade vendida. Os carrinhos são esvaziados somente mediante pagamento ou pelos clientes.
+Venda de produtos: Os produtos são selecionados, são incluídos em um carrinho e sua quantidade escolhida. Os produtos são comprados usando um número de cartão de crédito (qualquer número é aceito pelo sistema). A quantidade de produto vendida é subtraída da quantidade em estoque e adicionada à quantidade vendida. Os carrinhos são esvaziados somente quando o pagamento é efetuado ou pelos clientes removem todos os produtos.
 
-Gerenciamento de produto: os administradores podem criar/atualizar/ler/excluir ([crud](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)) novos produtos. Por exemplo, eles podem alterar a quantidade em estoque.
+Gerenciamento de produto: os administradores podem [criar/atualizar/ler/excluir](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) novos produtos. Por exemplo, eles podem alterar a quantidade em estoque.
 
 **[TO-DO] Sua funcionalidade: Crie uma funcionalidade que seja específica para seu aplicativo. Não precisa ser algo complicado. Por exemplo, se você está vendendo carros, pode permitir que os usuários usem um acelerador para ouvir como o motor de cada carro sobe e desce.**
 
