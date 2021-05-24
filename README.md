@@ -1,5 +1,7 @@
 # Fast & Furries
 
+<img src="https://i.imgur.com/s3LzM8E.png">
+
 Projeto da disciplina Introdução ao Desenvolvimento Web - SCC0219.
 
 O tema escolhido por nós foi desenvolver um website de um petshop virtual.
