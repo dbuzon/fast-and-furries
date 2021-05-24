@@ -23,7 +23,7 @@ O registro do administrador contém nome, CPF, telefone e e-mail.
 
 O registro de cada cliente contém nome, CPF, endereço, telefone e e-mail.
 
-Os registros de produto incluem nome, id, foto, descrição, preço, quantidade (em estoque), quantidade vendida.
+Os registros de produto incluem nome, id, foto, descrição, preço, quantidade em estoque e quantidade vendida.
 
 Venda de produtos: Os produtos são selecionados, são incluídos em um carrinho e sua quantidade escolhida. Os produtos são comprados usando um número de cartão de crédito (qualquer número é aceito pelo sistema). A quantidade de produto vendida é subtraída da quantidade em estoque e adicionada à quantidade vendida. Os carrinhos são esvaziados somente quando o pagamento é efetuado ou quando os clientes removem todos os produtos.
 
@@ -65,14 +65,7 @@ As funcionalidades visadas através das telas de mockup são:
 
 ### Servidor
 
-No atual estado do nosso site, as informações salvas no servidor atualmente seriam:
-
-- Cadastro do cliente
-  - Informações de login: Email, Senha (não em plain text, claro)
-  - Informações pessoais: Nome, CPF, Endereço, Número de telefone)
-  - Produtos no carrinho
-  - Histórico de compras
- 
+As informações salvas no servidor são as que estão descritas na parte **1. Requisitos**.
 
 ## 3. Comentários sobre o código
 
