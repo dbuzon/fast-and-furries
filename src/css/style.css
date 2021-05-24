@@ -12,6 +12,21 @@
     --preto: #333;
 }
 
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1 0 auto;
+}
+.footer {
+    flex-shrink: 0;
+}
+
+
 /* Default link style */
 a{
     color: var(--rosa);
@@ -178,5 +193,3 @@ body{
 .footer a{
     color: white;
 }
-
-
