@@ -1,6 +1,6 @@
-# Fast & Furries
+ <img src="https://i.imgur.com/s3LzM8E.png">
 
-<img src="https://i.imgur.com/s3LzM8E.png">
+# Fast and Furries
 
 Projeto da disciplina Introdução ao Desenvolvimento Web - SCC0219.
 
