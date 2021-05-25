@@ -7,9 +7,12 @@ Projeto da disciplina Introdução ao Desenvolvimento Web - SCC0219.
 O tema escolhido por nós foi desenvolver um website de um petshop virtual.
 
 ### Autores
-10851687	Débora Buzon da Silva <br>
-11275147	Dikson Ferreira dos Santos <br>
-10716960	Fernando de Souza Lincoln <br>
+
+| NUSP     | Nome                       |
+|----------|----------------------------|
+| 10851687 |	Débora Buzon da Silva      |
+| 11275147	| Dikson Ferreira dos Santos |
+| 10716960	| Fernando de Souza Lincoln  |
 
 ## 1. Requisitos
 
