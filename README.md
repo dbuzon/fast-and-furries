@@ -32,10 +32,9 @@ Venda de produtos: Os produtos são selecionados, são incluídos em um carrinho
 
 Gerenciamento de produto: os administradores podem [criar/atualizar/ler/excluir](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) novos produtos. Por exemplo, eles podem alterar a quantidade em estoque.
 
-**[TO-DO] Sua funcionalidade: Crie uma funcionalidade que seja específica para seu aplicativo. Não precisa ser algo complicado. Por exemplo, se você está vendendo carros, pode permitir que os usuários usem um acelerador para ouvir como o motor de cada carro sobe e desce.**
+Nosso sistema, como funcionalidade extra, (ainda não implementada) também terá um teste de personalidade em forma de quiz, que de acordo com as respostas dos usuários, escolherá um animal que mais se encaixa com o seu perfil.
 
 O sistema é responsivo e visa uma boa acessibilidade e usabilidade para seus usuários.
-
 
 ## 2. Descrição do Projeto
 
