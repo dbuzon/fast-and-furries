@@ -1,0 +1,11 @@
+.perfil {
+    margin-bottom: 100px;
+    margin-top: 20px;
+    display: block;
+    padding: 0 20px;
+}
+
+td {
+    padding: 10px;
+    max-width: 300px;
+}
