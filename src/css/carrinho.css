@@ -1,0 +1,33 @@
+.product img {
+    height: 80px;
+    border-radius: 3px;
+}
+
+.product-container {
+    margin-bottom: 100px;
+}
+
+table {
+    background-color: #f2f2f2;
+    border-radius: 3px;
+}
+
+td {
+    padding: 20px;
+}
+
+td.image, td.price {
+    width: 15%;
+}
+
+td.name, td.qtd {
+    width: 35%;
+}
+
+td.qtd {
+    text-align: end;
+}
+
+input[type="text"] {
+    width: 50px;
+}
