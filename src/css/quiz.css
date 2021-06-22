@@ -1,0 +1,51 @@
+.quiz{
+    width: 100%;
+    max-width: 750px;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 5px #ccc;
+    padding:30px 60px;    
+}
+
+.center-block {
+    display: block;
+    margin: auto auto;
+}
+
+.hide-content {
+    display: none;
+}
+
+.show-content {
+    display: inline;
+}
+
+td {
+    padding: 30px;
+    vertical-align: top;
+    text-align: justify;    
+}
+
+td img {
+    width: 200px;
+    border-radius: 3px;
+}
+
+td h2 {
+    color: var(--rosa);
+}
+
+label {
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p{
+    margin-bottom: 10px;
+}
