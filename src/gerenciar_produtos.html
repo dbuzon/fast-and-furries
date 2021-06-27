@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gerenciar Produtos | Fast & Furries</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="icon" type="image/png" href="image/favicon.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/gerenciar_produtos.css">
+        <link rel="stylesheet" href="css/mobile.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+
+        <script src="js/mock/cart.js"></script>
+        <script src="js/mock/account.js"></script>
+        <script src="js/mock/product.js"></script>
+
+        <script src="js/pages/manage-products-page.js"></script>
+    </head>
+
+    <body>
+        <div class="content">
+            
+            <div class="site-navbar">
+                <div class="navbar-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="home.html">
+                                    <h1 class="navbar-title"><i class="fa fa-paw"></i> FAST & FURRIES</h1>
+                                </a>
+                                <span class="navbar-menu">
+                                    <a id="cart" class="shopping-cart" href="carrinho.html"><i class="fa fa-shopping-cart"></i></a> 
+                                    <a href="login.html"><i class="fa fa-user"></i> <span class="navbar-text">Entrar<span></a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-bottom text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="home.html?categoria=0">Ração</a>
+                                <a href="home.html?categoria=1">Brinquedos</a>
+                                <a href="home.html?categoria=2">Acessórios</a>
+                                <a href="home.html?categoria=3">Caminhas</a>
+                                <a href="home.html?categoria=4">Cosméticos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+
+            <div class="container text-left">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Gerenciar Produtos</h2>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="manage-box">
+                            
+                            <form>
+                                <div class="preco">
+                                    <h2>Adicionar Produto</h2>
+                                </div> 
+                                <br>
+                                <table>
+                                    <tr>
+                                        <td><p> Nome: </p></td>
+                                        <td> <input id="product-name" type="text"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td><p> Categoria: </p></td>
+                                        <td> <input id="product-category" type="text"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td><p> Preço: </p></td>
+                                        <td> <input id="product-price" type="text"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td><p> Descrição: </p></td>
+                                        <td> <input id="product-description" type="text"> </td>
+                                    </tr>
+                                    <tr>
+                                        <td><p> Imagem: </p></td>
+                                        <td> <input id="product-image" type="text"> </td>
+                                    </tr>
+                                </table>
+                                <br>
+                                <div>
+                                    <input type="submit" value="Adicionar">
+                                </div>    
+                            </form>
+
+                        </div>
+                        <div class="manage-box">
+                            
+                            <form>
+                                <div class="preco">
+                                    <h2>Remover Produto</h2>
+                                </div> 
+                                <br>
+                                <table>
+                                    <tr>
+                                        <td><p> ID: </p></td>
+                                        <td> <input id="product-id" type="text"> </td>
+                                    </tr>
+                                </table>
+                                <br>
+                                <div>
+                                    <input type="submit" value="Remover">
+                                </div>    
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Sobre nós</h3>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Links</h3>
+                        <hr>
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="carrinho.html">Carrinho</a></li>
+                            <!-- <li><a href="perfil_cliente.html">Perfil do Cliente</a></li> -->
+                            <li><a href="quiz.html">Quiz</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Atendimento</h3>
+                        <hr>
+                        <p>
+                            <i class="fa fa-envelope"></i> atendimento@fastandfurries.com <br>
+                            <i class="fa fa-phone"></i> (12) 1234-5678 <br>
+                            <br>
+                            segunda à sexta, 10h00 - 11h00
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
