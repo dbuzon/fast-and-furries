@@ -48,7 +48,7 @@ function putProducts(name, category, price, description, image = null, sold = 0)
     );
 
     products.sort( (a, b) => {
-        return a.sold < b.sold;
+        return b.sold - a.sold;
     });
 }
 
