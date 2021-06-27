@@ -27,7 +27,7 @@ O tema escolhido por nós foi desenvolver um website de um petshop virtual.
 
 ## 1. Requisitos
 
-O sistema deve ter 2 tipos de usuários: clientes e administradores (o segundo ainda precisa ser implementado).
+O sistema deve ter 2 tipos de usuários: clientes e administradores.
 
 Os administradores são responsáveis por registrar/gerenciar administradores, clientes e produtos fornecidos. O aplicativo já vem com uma conta `admin` com senha `admin`.
 
