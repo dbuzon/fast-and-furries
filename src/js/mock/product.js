@@ -12,6 +12,16 @@ function getProduct(id){
     return null;
 }
 
+function deleteProduct(id){
+    for(let i = 0;i < products.length;i++){
+        if (products[i].id == id) {
+            products.splice(i, 1);
+            return true;
+        }
+    }
+    return false;
+}
+
 function getProductsByCategory(category){
     let response = [];
 
