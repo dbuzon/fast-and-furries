@@ -49,3 +49,8 @@ h2{
 p{
     margin-bottom: 10px;
 }
+
+span {
+    color: var(--rosa-escuro);
+    font-weight: bold;
+}
