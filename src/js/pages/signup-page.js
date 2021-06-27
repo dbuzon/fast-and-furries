@@ -15,23 +15,23 @@ function signup(event){
     let password = document.getElementById("user-password").value.trim();
 
     if (name.length == 0){
-        alert('O campo Nome precisa ser preenchido');
+        alert('O campo \'Nome\' precisa ser preenchido');
         return;
     }
     if (cpf.length == 0){
-        alert('O campo Cpf precisa ser preenchido');
+        alert('O campo \'CPF\' precisa ser preenchido');
         return;
     }
     if (address.length == 0){
-        alert('O campo Endereço precisa ser preenchido');
+        alert('O campo \'Endereço\' precisa ser preenchido');
         return;
     }
     if (email.length == 0){
-        alert('O campo E-mail precisa ser preenchido');
+        alert('O campo \'E-mail\' precisa ser preenchido');
         return;
     }
     if (password.length == 0){
-        alert('O campo Senha precisa ser preenchido');
+        alert('O campo \'Senha\' precisa ser preenchido');
         return;
     }
 

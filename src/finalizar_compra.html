@@ -68,32 +68,36 @@
             <div class="container">
                 <div class="row justify-content-md-left">
                     <div class="col-md-12 compra">
-                        <div class="preco">
-                            <p id="total-price"></p>
-                        </div> 
-                        <br>
-                        <table>
-                            <tr>
-                                <td><p> CPF: </p></td>
-                                <td> <input type="text"> </td>
-                            </tr>
-                            <tr>
-                                <td><p> Número do cartão: </p></td>
-                                <td> <input type="text"> </td>
-                            </tr>
-                            <tr>
-                                <td><p> Código de segurança: </p></td>
-                                <td> <input type="text"> </td>
-                            </tr>
-                            <tr>
-                                <td><p> Endereço de entrega: </p></td>
-                                <td> <input type="text"> </td>
-                            </tr>
-                        </table>
-                        <br>
-                        <div>
-                            <input type="submit" value="Comprar">
-                        </div>    
+
+                        <form onsubmit="purchase(event)">
+                            <div class="preco">
+                                <p id="total-price"></p>
+                            </div> 
+                            <br>
+                            <table>
+                                <tr>
+                                    <td><p> CPF: </p></td>
+                                    <td> <input id="user-cpf" type="text"> </td>
+                                </tr>
+                                <tr>
+                                    <td><p> Número do cartão: </p></td>
+                                    <td> <input id="user-card-number" type="text"> </td>
+                                </tr>
+                                <tr>
+                                    <td><p> Código de segurança: </p></td>
+                                    <td> <input id="user-card-secret" type="text"> </td>
+                                </tr>
+                                <tr>
+                                    <td><p> Endereço de entrega: </p></td>
+                                    <td> <input id="user-address" type="text"> </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <div>
+                                <input type="submit" value="Comprar">
+                            </div>    
+                        </form>
+
                     </div>           
                 </div>
                      
