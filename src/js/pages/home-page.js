@@ -34,10 +34,13 @@ function init(){
             row.classList.add('row');
         }
 
+        let image_path = "image/placeholder.jpg";
+        if (obj.image != null) image_path = "image/products/" + obj.image;
+
         let node = document.createElement("div");
         node.classList.add("col-md-3");
         node.innerHTML = 
-        "<a class=\"product\" href=\"produto.html?id="+ obj.id +"\"> <img src=\"image/placeholder.jpg\" alt=\"\"> <p href=\"/\">"+ obj.name +" <br> <span>R$ "+ parseFloat(obj.price).toFixed(2) +"</span></p></a>";
+        "<a class=\"product\" href=\"produto.html?id="+ obj.id +"\"> <img src=\""+ image_path +"\" alt=\"\"> <p href=\"/\">"+ obj.name +" <br> <span>R$ "+ parseFloat(obj.price).toFixed(2) +"</span></p></a>";
 
         row.appendChild(node);
     });
