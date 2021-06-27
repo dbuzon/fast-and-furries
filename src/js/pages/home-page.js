@@ -6,7 +6,7 @@ function init(){
     let products = [];
     let cat = getCategoryId();
     if (cat == -1) {
-        products = getProducts(8);
+        products = getProducts();
         document.getElementById('product-title').innerHTML = "<h2>Em alta</h2><p>As escolhas favoritas dos nossos consumidores.</p>";
     }
     else {

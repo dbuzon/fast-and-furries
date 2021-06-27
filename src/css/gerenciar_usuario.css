@@ -1,0 +1,25 @@
+.manage-box{
+    width: 100%;
+    max-width: 750px;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 5px #ccc;
+    padding:30px 30px;    
+    margin-top:40px;
+}
+
+table {
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+td {
+    padding: 15px;
+    max-width: 300px;
+}
+
+.manage-box h2{
+    font-size: 20px;
+}
