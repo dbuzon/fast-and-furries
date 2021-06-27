@@ -34,10 +34,10 @@ function init(){
 }
 
 function selectAnimal(d, c, t, p) {
-    const cat = new Result("image/gato.png", "Gato", "Você é super independente e sabe se virar sozinho, assim como os gatinhos, esses seres super fofos e com a autoestima sempre no topo. Apesar dessa independência toda, você é uma ótima companhia para pessoas que pensam parecido com você!")
-    const dog = new Result("image/cachorro.png","Cachorro", "Você é cheio de energia e gosta da companhia dos seus amigos. Cachorros também são assim, super animados! Um ótimo bichinho para os mais necessitados de atenção ou que gostam de estar passeando pela cidade sempre.")
-    const turtle = new Result("image/tartaruga.png","Tartaruga", "Calmo, paciente, relaxado... É o que todos dizem assim que conversam um pouquinho com você, não é? Sempre tranquilo como uma... Tartaruga! Esse bichinho é uma ótima escolha para os que prezam pelo ditado do \"devagar se vai longe\".")
-    const parrot = new Result("image/papagaio.png","Papagaio", "Você... Gosta de repetir o que te dizem, pelo visto? Apesar da falta de criatividade, você é uma companhia amada e cheia de carisma, e as pessoas amam te contar as coisas e ver que você prestou atenção em tudo! Uma ótima escolha para quebrar o climão daqueles dias silenciosos, quando tudo parece estar tão quietinho.")
+    const cat = new Result("image/gato.png", "Gato 🐱", "Você é super independente e sabe se virar sozinho, assim como os gatinhos, esses seres super fofos e com a autoestima sempre no topo. Apesar dessa independência toda, você é uma ótima companhia para pessoas que pensam parecido com você!")
+    const dog = new Result("image/cachorro.png","Cachorro 🐶", "Você é cheio de energia e gosta da companhia dos seus amigos. Cachorros também são assim, super animados! Um ótimo bichinho para os mais necessitados de atenção ou que gostam de estar passeando pela cidade sempre.")
+    const turtle = new Result("image/tartaruga.png","Tartaruga 🐢", "Calmo, paciente, relaxado... É o que todos dizem assim que conversam um pouquinho com você, não é? Sempre tranquilo como uma... Tartaruga! Esse bichinho é uma ótima escolha para os que prezam pelo ditado do \"devagar se vai longe\".")
+    const parrot = new Result("image/papagaio.png","Papagaio 🦜", "Você... Gosta de repetir o que te dizem, pelo visto? Apesar da falta de criatividade, você é uma companhia amada e cheia de carisma, e as pessoas amam te contar as coisas e ver que você prestou atenção em tudo! Uma ótima escolha para quebrar o climão daqueles dias silenciosos, quando tudo parece estar tão quietinho.")
 
     if (d >= c && d >= t && d >= p) return dog
     else if (c >= d && c >= t && c >= p) return cat
