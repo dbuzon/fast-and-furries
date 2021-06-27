@@ -11,6 +11,12 @@
         <link rel="stylesheet" href="css/mobile.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
+
+        <script src="js/mock/cart.js"></script>
+        <script src="js/mock/account.js"></script>
+        <script src="js/mock/product.js"></script>
+
+        <script src="js/pages/product-page.js"></script>
     </head>
 
     <body>
@@ -23,7 +29,7 @@
                                 <h1 class="navbar-title"><i class="fa fa-paw"></i> FAST & FURRIES</h1>
                             </a>
                             <span class="navbar-menu">
-                                <a class="shopping-cart" href="/"><i class="fa fa-shopping-cart"></i></a> 
+                                <a id="cart" class="shopping-cart" href="carrinho.html"><i class="fa fa-shopping-cart"></i></a> 
                                 <a href="login.html"><i class="fa fa-user"></i> <span class="navbar-text">Entrar<span></a>
                             </span>
                         </div>
@@ -53,17 +59,15 @@
                         
                     </div>
                     <div class="col-md-5 product">
-                            <h2>Product name</h2>
-                            <br>
-                            <p> Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor 
-                                sit amet consectetur Lorem ipsum dolor sit amet consectetur.<br> 
-                                Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor 
-                                sit amet consectetur. <br><br><br>
+                            <h2 id="product-name"></h2>
 
-                                <span>R$ 1,00</span><br><br>
-                                <input type="submit" value="Adicionar ao carrinho">
-                            </p>
-                        
+                            <br>
+                            <p id="product-description"></p>
+                            <br>
+
+                            <p><span id="product-price"></span></p>
+
+                            <input onclick="addToCart()" type="submit" value="Adicionar ao carrinho">
                     </div>                
                 </div>            
             </div>

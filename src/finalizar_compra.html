@@ -11,6 +11,12 @@
         <link rel="stylesheet" href="css/mobile.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
+
+        <script src="js/mock/cart.js"></script>
+        <script src="js/mock/account.js"></script>
+        <script src="js/mock/product.js"></script>
+
+        <script src="js/pages/purchase-page.js"></script>
     </head>
 
     <body>
@@ -23,7 +29,7 @@
                                 <h1 class="navbar-title"><i class="fa fa-paw"></i> FAST & FURRIES</h1>
                             </a>
                             <span class="navbar-menu">
-                                <a class="shopping-cart" href="/"><i class="fa fa-shopping-cart"></i></a> 
+                                <a id="cart" class="shopping-cart" href="carrinho.html"><i class="fa fa-shopping-cart"></i></a> 
                                 <a href="login.html"><i class="fa fa-user"></i> <span class="navbar-text">Entrar<span></a>
                             </span>
                         </div>
@@ -59,7 +65,7 @@
                 <div class="row justify-content-md-left">
                     <div class="col-md-12 compra">
                         <div class="preco">
-                            <p>Preço Total: R$ <span>4206.9</span></p>
+                            <p id="total-price"></p>
                         </div> 
                         <br>
                         <table>

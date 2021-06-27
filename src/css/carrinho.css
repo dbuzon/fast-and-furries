@@ -16,12 +16,21 @@ td {
     padding: 20px;
 }
 
-td.image, td.price {
-    width: 15%;
-}
+td.image {  width: 15%;}
+td.name {   width: 40%;}
+td.qtd {    width: 20%;}
+td.price {  width: 15%;}
+td.delete { width: 10%;}
 
-td.name, td.qtd {
-    width: 35%;
+td.delete p{
+    color: var(--preto);
+    font-size: 20px;
+    cursor: pointer;
+    display: inline;
+    padding:10px;
+}
+td.delete p:hover{
+    color: var(--rosa-escuro);
 }
 
 td.qtd {

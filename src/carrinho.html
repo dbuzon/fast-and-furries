@@ -11,6 +11,12 @@
         <link rel="stylesheet" href="css/mobile.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
+
+        <script src="js/mock/cart.js"></script>
+        <script src="js/mock/account.js"></script>
+        <script src="js/mock/product.js"></script>
+
+        <script src="js/pages/cart-page.js"></script>
     </head>
 
     <body>
@@ -23,7 +29,7 @@
                                 <h1 class="navbar-title"><i class="fa fa-paw"></i> FAST & FURRIES</h1>
                             </a>
                             <span class="navbar-menu">
-                                <a class="shopping-cart" href="/"><i class="fa fa-shopping-cart"></i></a> 
+                                <a id="cart" class="shopping-cart" href="carrinho.html"><i class="fa fa-shopping-cart"></i></a> 
                                 <a href="login.html"><i class="fa fa-user"></i> <span class="navbar-text">Entrar<span></a>
                             </span>
                         </div>
@@ -60,27 +66,23 @@
         <div class="product-container container">
             <div class="product row">
                 <div class="col-md12">
-                    <table>                        
-                        <tr>
+                    <table id="cart-table">                        
+                         <!-- <tr>
                             <td class="image"><img src="image/placeholder.jpg" alt="product image"></td>
                             <td class="name"><p>nome</p></td>
-                            <td class="qtd"><input type="text" name="quantity" id="quantity" placeholder="Qtd"></td>
+                            <td class="qtd"><p>1x</p></td>
                             <td class = "price"><p>preço</p></td>
-                        </tr> 
-                        <tr>
-                            <td class="image"><img src="image/placeholder.jpg" alt="product image"></td>
-                            <td class="name"><p>nome</p></td>
-                            <td class="qtd"><input type="text" name="quantity" id="quantity" placeholder="Qtd"></td>
-                            <td class = "price"><p>preço</p></td>
-                        </tr>                                                 
+                        </tr>                                                -->
                     </table> 
                 </div>         
             </div>   
             <br>         
             <div class="row">
                 <div class="col-md-12">
-                    <p>Preço total</p>
-                    <input type="submit" value="Finalizar Compra">
+                    <p id="total-price"></p>
+                    <a href="./finalizar_compra.html">
+                        <input type="submit" value="Finalizar Compra">
+                    </a>
                 </div> 
             </div>                      
         </div>
