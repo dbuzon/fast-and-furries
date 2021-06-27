@@ -14,16 +14,16 @@ O tema escolhido por nós foi desenvolver um website de um petshop virtual.
 | 11275147	| Dikson Ferreira dos Santos |
 | 10716960	| Fernando de Souza Lincoln  |
 
-- [Fast and Furries](#fast-and-furries)
-    + [Autores](#autores)
-  * [1. Requisitos](#1-requisitos)
-  * [2. Descrição do Projeto](#2-descrição-do-projeto)
-  * [3. Comentários sobre o código](#3-coment-rios-sobre-o-c-digo)
-  * [4. Plano de teste](#4-plano-de-teste)
-  * [5. Resultados dos testes](#5-resultados-dos-testes)
-  * [6. Building](#6-building)
-  * [7. Problemas](#7-problemas)
-  * [8. Comentários](#8-coment-rios)
+### Tabela de conteúdos 
+
+- [1. Requisitos](#1-requisitos)
+- [2. Descrição do Projeto](#2-descrição-do-projeto)
+- [3. Comentários sobre o código](#3-comentários-sobre-o-código)
+- [4. Plano de teste](#4-plano-de-teste)
+- [5. Resultados dos testes](#5-resultados-dos-testes)
+- [6. Building](#6-building)
+- [7. Problemas](#7-problemas)
+- [8. Comentários](#8-comentários)
 
 ## 1. Requisitos
 
