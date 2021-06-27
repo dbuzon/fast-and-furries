@@ -36,20 +36,26 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="login">
-                        <h2 class="text-center"><i class="fa fa-user"></i> Entrar</h2>
-                        <br>
 
-                        <p>E-mail</p>
-                        <input placeholder="seu@email.com" type="text"><br>
-                        <br>
-                        <p>Senha</p>
-                        <input placeholder="******" type="password"><br>
-                        <br>
-                        
-                        <input type="submit" value="Entrar"><br>
-                        <br>
+                        <form onsubmit="login(event)">
 
-                        <p>Não tem cadastro? Crie uma <a href="cadastro.html">nova conta</a></p>
+                            <h2 class="text-center"><i class="fa fa-user"></i> Entrar</h2>
+                            <br>
+    
+                            <p>E-mail</p>
+                            <input id="email" placeholder="seu@email.com" type="text"><br>
+                            <br>
+                            <p>Senha</p>
+                            <input id="password" placeholder="******" type="password"><br>
+                            <br>
+                            
+                            <input type="submit" value="Entrar"><br>
+                            <br>
+    
+                            <p>Não tem cadastro? Crie uma <a href="cadastro.html">nova conta</a></p>
+
+                        </form>
+
                     </div>
                 </div>
             </div>

@@ -1,11 +1,13 @@
 var accounts = [];
 
-function putAccounts(name, email, password, cpf = null, address = null, phone = null){
+function putAccounts(name, email, password, admin = false, cpf = null, address = null, phone = null){
     accounts.push(
         {
+            id: accounts.length, 
             name: name, 
             email: email, 
             password: password,
+            admin: admin,
             cpf: cpf,
             address: address,
             phone: phone
@@ -17,16 +19,30 @@ function getAccounts(n = accounts.length){
     return accounts.slice(0, n);
 }
 
+function getAccountById(id){
+    for(let i = 0;i < accounts.length;i++){
+        if (accounts[i].id == id) return accounts[i];
+    }
+    return null;
+}
+
+function getAccountByEmail(email){
+    for(let i = 0;i < accounts.length;i++){
+        if (accounts[i].email == email) return accounts[i];
+    }
+    return null;
+}
+
 function auth(email, password){
-    for(id in accounts){
-        if (accounts[id].email === email && accounts[id].password === password){
-            return true;
+    for(i in accounts){
+        if (accounts[i].email === email && accounts[i].password === password){
+            return accounts[i];
         }
     }
     
-    return false;
+    return null;
 }
 
 
-putAccounts("fernando", "lincoln@gmail.com", "123456", "cpf qualquer", "endereço qualquer");
-putAccounts("fernando", "lincoln@usp.com", "123456");
+putAccounts('Administrador', 'admin', 'admin', true);
+putAccounts('Usuário comum', 'user', 'user', false);

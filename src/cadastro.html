@@ -39,32 +39,36 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="cadastro">
-                        <h2 class="text-center"><i class="fa fa-user"></i> Cadastre-se </h2>
-                        <br>
-                        <p>Nome</p>
-                        <input type="text"><br>
-                        <br>
 
-                        <p>CPF</p>
-                        <input type="text"><br>
-                        <br>
+                        <form onsubmit="signup(event)">
+                            <h2 class="text-center"><i class="fa fa-user"></i> Cadastre-se </h2>
+                            <br>
+                            <p>Nome</p>
+                            <input id="user-name" type="text"><br>
+                            <br>
 
-                        <p>Endereço</p>
-                        <input type="text"><br>
-                        <br>
+                            <p>CPF</p>
+                            <input id="user-cpf" type="text"><br>
+                            <br>
 
-                        <p>E-mail</p>
-                        <input type="text"><br>
-                        <br>
+                            <p>Endereço</p>
+                            <input id="user-address" type="text"><br>
+                            <br>
 
-                        <p>Senha</p>
-                        <input type="password"><br>
-                        <br>
-                        
-                        <input type="submit" value="Cadastrar"><br>
-                        <br>
+                            <p>E-mail</p>
+                            <input id="user-email" type="text"><br>
+                            <br>
 
-                        <p>Já é cadastrado? <a href="login.html">Faça login</a></p>
+                            <p>Senha</p>
+                            <input id="user-password" type="password"><br>
+                            <br>
+                            
+                            <input type="submit" value="Cadastrar"><br>
+                            <br>
+
+                            <p>Já é cadastrado? <a href="login.html">Faça login</a></p>
+                        </form>
+
                     </div>
                 </div>
             </div>
