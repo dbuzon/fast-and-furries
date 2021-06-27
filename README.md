@@ -43,13 +43,13 @@ Venda de produtos: Os produtos são selecionados, são incluídos em um carrinho
 
 Gerenciamento de produto: os administradores podem [criar/atualizar/ler/excluir](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) novos produtos. Por exemplo, eles podem alterar a quantidade em estoque.
 
-Nosso sistema, como funcionalidade extra, (ainda não implementada) também terá um teste de personalidade em forma de quiz, que de acordo com as respostas dos usuários, escolherá um animal que mais se encaixa com o seu perfil.
+Nosso sistema, como funcionalidade extra, também terá um teste de personalidade em forma de quiz, que de acordo com as respostas dos usuários, escolherá um animal que mais se encaixa com o seu perfil.
 
 O sistema é responsivo e visa uma boa acessibilidade e usabilidade para seus usuários.
 
 ## 2. Descrição do Projeto
 
-Fast & Furries é um petshop virtual, implementado com HTML e CSS (até agora), que vende produtos como (mas não limitado a) brinquedos e acessórios destinados à bichinhos de estimação.
+Fast & Furries é um petshop virtual, implementado com HTML, CSS e JavaScript (até agora), que vende produtos destinados ao cuidado e ao lazer de bichinhos de estimação, como brinquedos, acessórios, caminhas e muito mais.
 
 ### Diagrama de navegação:
 
@@ -66,15 +66,17 @@ Também pode ser acessado nos links abaixo:
 
 ### Funcionalidades
 
-As funcionalidades visadas através das telas de mockup são:
+As funcionalidades visadas pelo nosso site são:
 
 - Login com email e senha na plataforma, com opção de criar uma nova conta.
 - Visualização das informações do cliente, com opção de alterar cadastro.
+- Visualização da página de administrador, com opção de administrar os produtos e usuários da loja.
 - Acesso à homepage, com visualização de alguns produtos selecionados pela loja.
 - Visualização de um produto, com seu nome, descrição, preço e botão para adicionar ao carrinho.
 - Acesso ao carrinho de compras, com opção de mudar a quantidade de itens, conferir o preço total e finalizar compra.
 - Opção de inserir informações do cartão de crédito para efetuar o pagamento.
 - Opção de alterar o endereço de entrega.
+- Um teste de personalidade animal com perguntas de múltiplas respostas  
 
 ### Servidor
 
@@ -86,13 +88,22 @@ Usamos bootstrap para facilitar a implementação de um layout responsivo.
 
 ## 4. Plano de teste
 
+Nosso projeto foi desenvolvido e testado no Firefox e no Google Chrome, dois navegadores muito populares no mercado.
+Não utilizamos cookies no projeto, então cada vez que a página é recarregada, as informações são perdidas (por isso que o carrinho fica sempre com 3 produtos quando a página é recarregada, mesmo que removam ou adicionem itens nele). 
+
 ## 5. Resultados dos testes
+
+O comportamento do site apresenta ser satisfatório nos dois navegadores testados, tendo em vista as limitações indicadas. 
 
 ## 6. Building
 
+Para visualização do site, somente é necessário que esse repositório seja baixado. O acesso a cada página individual pode ser realizado abrindo o arquivo HTML correspondente no seu navegador preferido - As condições de teste estão indicadas na parte **4. Plano de teste**
+
 ## 7. Problemas
 
-Um dos problemas identificados inicialmente foi uma certa dificuldade de traduzir as imagens do mockup para código HTML e CSS, por causa da falta de padronização do tamanho das fontes entre as telas feitas no mockup.
+- Certa dificuldade de traduzir as imagens do mockup para código HTML e CSS, por causa da falta de padronização do tamanho das fontes entre as telas feitas no mockup.
+- Tempo gasto no aprendizado de novas tecnologias, como bootstrap 
+- Algumas coisas específicas de implementação de cada navegador tornam alguns bugs difíceis de serem identificados. Por exemplo, [Array.sort se comporta diferentemente em diferentes navegadores.](https://stackoverflow.com/questions/55039157/array-sort-behaves-differently-in-firefox-and-chrome-edge)
 
 ## 8. Comentários
 
