@@ -50,7 +50,7 @@ p{
     margin-bottom: 10px;
 }
 
-span {
-    color: var(--rosa-escuro);
+.quiz span {
+    color: var(--rosa);
     font-weight: bold;
 }
