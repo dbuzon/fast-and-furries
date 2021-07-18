@@ -1,0 +1,74 @@
+<template>
+    <div class="container text-left">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Finalizar Compra</h2>
+                <p>Home > Carrinho > Finalizar Compra</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-md-left">
+            <div class="col-md-12 compra">
+
+                <form onsubmit="purchase(event)">
+                    <div class="preco">
+                        <p id="total-price"></p>
+                    </div> 
+                    <br>
+                    <table>
+                        <tr>
+                            <td><p> CPF: </p></td>
+                            <td> <input id="user-cpf" type="text"> </td>
+                        </tr>
+                        <tr>
+                            <td><p> Número do cartão: </p></td>
+                            <td> <input id="user-card-number" type="text"> </td>
+                        </tr>
+                        <tr>
+                            <td><p> Código de segurança: </p></td>
+                            <td> <input id="user-card-secret" type="text"> </td>
+                        </tr>
+                        <tr>
+                            <td><p> Endereço de entrega: </p></td>
+                            <td> <input id="user-address" type="text"> </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <div>
+                        <input type="submit" value="Comprar">
+                    </div>    
+                </form>
+
+            </div>           
+        </div>                
+    </div>
+</template>
+
+<script>
+export default {
+  name: 'FinalizarCompra',  
+}
+</script>
+
+<style scoped>
+.compra {
+    margin-bottom: 100px;
+    margin-top: 20px;
+    display: block;
+    padding: 0 20px;
+}
+
+td {
+    padding: 10px;
+    max-width: 300px;
+}
+
+.preco {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: var(--rosa-escuro);
+}
+</style>

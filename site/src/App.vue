@@ -1,43 +1,40 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <div class="content">
+      <nav-bar id="nav"></nav-bar>
+      <router-view />
+  </div> 
 
   <FooterFF></FooterFF>
 </template>
 
 <script>
 import FooterFF from "./components/FooterFF.vue";
+import NavBar from "./components/NavBar.vue";
 
 export default {
   components: {
     FooterFF,
+    NavBar,
   },
   setup() {},
 };
 </script>
 
 <style>
+@import './assets/styles/reset.css';
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import './assets/styles/default.css';
+@import './assets/styles/mobile.css';
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'RobotoS';
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  -moz-osx-font-smoothing: grayscale;    
 }
 
-#nav {
-  padding: 30px;
+.content {
+    flex: 1 0 auto;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

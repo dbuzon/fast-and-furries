@@ -35,3 +35,47 @@
     </div>
   </div>
 </template>
+
+<style>
+.footer{   
+    flex-shrink: 0;
+    display: block;
+    background-color: var(--rosa);
+}
+
+.footer::before{
+    position: absolute;
+    left: 50%;
+    margin-top: -20px;
+    content: "\f1b0";    
+    font-family: FontAwesome;
+    font-size: 30px;
+    color: var(--preto);
+}
+
+.footer h3{
+    margin-top:20px;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.footer p{
+    color:white;
+}
+
+.footer hr{
+    height: 0.5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #fff;
+    opacity: 0.5;
+}
+.footer ul{
+    padding-left: 0;
+}
+
+.footer a{
+    color: white;
+}
+</style>
