@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
     res.status(200).send({
-        title: "It's working",
+        title: "Fast & Furries",
         version: "0.0.1"
     });
 });
