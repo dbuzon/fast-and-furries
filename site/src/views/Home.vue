@@ -1,17 +1,17 @@
 <template>
-  <div class="home">
-    <div class="container text-center home-content-title">
-      <div class="row">
-          <div id="product-title" class="col-md-12"></div>
-      </div>
+    <div class="home">
+        <div class="container text-center home-content-title">
+        <div class="row">
+            <div id="product-title" class="col-md-12"></div>
+        </div>
+        </div>
+        <div id="product-container" class="container text-center"></div>
     </div>
-    <div id="product-container" class="container text-center"></div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',  
+    name: 'Home',  
 }
 </script>
 

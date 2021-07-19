@@ -17,7 +17,11 @@
                         <h3>Gerenciar Produtos</h3>
                         <p>Adicione ou remova produtos da loja</p>
                     </td></tr>
-                    <tr><td class="pad"><input type="submit" value="Gerenciar"></td></tr>
+                    <tr><td class="pad">
+                        <router-link to="/gerenciar-produto">
+                            <input type="submit" value="Gerenciar">
+                        </router-link>                        
+                    </td></tr>
                 </table>
             </div>      
             <div class="col-md-6">
@@ -27,7 +31,11 @@
                         <h3>Gerenciar Usuários</h3>
                         <p>Gerencie os dados e outras informações dos usuários</p>
                     </td></tr>
-                    <tr><td class="pad"><input type="submit" value="Gerenciar"></td></tr>
+                    <tr><td class="pad">
+                        <router-link to="/gerenciar-usuario">
+                            <input type="submit" value="Gerenciar"> 
+                        </router-link>                        
+                    </td></tr>
                 </table> 
             </div>                                
         </div> 

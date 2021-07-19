@@ -18,7 +18,7 @@
                         <input type="submit" value="Entrar"><br>
                         <br>
 
-                        <p>Não tem cadastro? Crie uma <a href="cadastro.html">nova conta</a></p>
+                        <p>Não tem cadastro? Crie uma <router-link to="/cadastro">nova conta</router-link></p>
 
                     </form>
                 </div>

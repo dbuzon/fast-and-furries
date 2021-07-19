@@ -30,7 +30,7 @@
                         <input type="submit" value="Cadastrar"><br>
                         <br>
 
-                        <p>Já é cadastrado? <a href="login.html">Faça login</a></p>
+                        <p>Já é cadastrado? <router-link to="/login">Faça login</router-link></p>
                     </form>
 
                 </div>

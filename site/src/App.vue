@@ -1,22 +1,31 @@
 <template>
-  <div class="content">
-      <nav-bar id="nav"></nav-bar>
-      <router-view />
-  </div> 
+    <div class="content">
+        <HeaderFF v-if="SelectNavbar"></HeaderFF>
+        <nav-bar v-else></nav-bar>              
+        <router-view />
+    </div> 
 
-  <FooterFF></FooterFF>
+    <FooterFF v-if="!SelectNavbar"></FooterFF>
 </template>
 
 <script>
 import FooterFF from "./components/FooterFF.vue";
 import NavBar from "./components/NavBar.vue";
+import HeaderFF from "./components/HeaderFF.vue";
 
 export default {
-  components: {
-    FooterFF,
-    NavBar,
-  },
-  setup() {},
+    components: {
+        FooterFF,
+        NavBar,
+        HeaderFF,
+    },
+    setup() {},
+    
+    computed: {
+        SelectNavbar() {
+            return (this.$route.name == 'Login' || this.$route.name == 'Cadastro');
+        }
+    }
 };
 </script>
 
@@ -28,9 +37,9 @@ export default {
 @import './assets/styles/mobile.css';
 
 #app {
-  font-family: 'RobotoS';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;    
+    font-family: 'RobotoS';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
 }
 
 .content {

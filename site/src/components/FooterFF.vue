@@ -15,10 +15,10 @@
           <h3>Links</h3>
           <hr />
           <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="carrinho.html">Carrinho</a></li>
+            <li><router-link to='/'>Home</router-link></li>
+            <li><router-link to='/carrinho'>Carrinho</router-link></li>
             <!-- <li><a href="perfil_cliente.html">Perfil do Cliente</a></li> -->
-            <li><a href="quiz.html">Quiz</a></li>
+            <li><router-link to="/quiz">Quiz</router-link></li>
           </ul>
         </div>
         <div class="col-md-4">

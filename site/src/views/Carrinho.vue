@@ -21,9 +21,9 @@
         <div class="row">
             <div class="col-md-12">
                 <p id="total-price"></p>
-                <a href="finalizar_compra.html">
+                <router-link to="/finalizar-compra">
                     <input type="submit" value="Finalizar Compra">
-                </a>
+                </router-link>
             </div> 
         </div>                      
     </div>

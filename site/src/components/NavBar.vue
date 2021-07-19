@@ -4,12 +4,12 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <a href="home.html">
+                                <router-link to="/">
                                     <h1 class="navbar-title"><i class="fa fa-paw"></i> FAST & FURRIES</h1>
-                                </a>
+                                </router-link>
                                 <span class="navbar-menu">
-                                    <a id="cart" class="shopping-cart" href="carrinho.html"><i class="fa fa-shopping-cart"></i></a> 
-                                    <a href="login.html"><i class="fa fa-user"></i> <span class="navbar-text">Entrar</span></a>
+                                    <router-link id="cart" class="shopping-cart" to="/carrinho"><i class="fa fa-shopping-cart"></i></router-link> 
+                                    <router-link to="/login"><i class="fa fa-user"></i> <span class="navbar-text">Entrar</span></router-link>
                                 </span>
                             </div>
                         </div>
