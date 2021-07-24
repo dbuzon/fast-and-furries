@@ -12,11 +12,18 @@
         <div class="row">
             <div class="col-md-12">                       
                 <div class="manage-box">      
-                    <div class="preco">
+                    <div>
                         <h2>Usuários</h2>
                     </div> 
                     <br>
-                    <table data-table>                                                             
+                    <table>
+                        <tr v-for="user in users" :key="user.id">
+                            <td><p>{{user.id}}</p></td>
+                            <td><p>{{user.name}}</p></td>
+                            <td><p>{{user.cpf}}</p></td>
+                            <td><p>{{user.email}}</p></td>
+                            <td>{{chooseType(user.admin)}}</td>
+                        </tr>                                                             
                     </table>
                 </div>
             </div>
@@ -26,7 +33,30 @@
 
 <script>
 export default {
-  name: 'GerenciarUsuario',  
+    name: 'GerenciarUsuario',  
+    data() {
+        return {
+            users: [{
+                id:'1',
+                name: 'user',
+                cpf: '99999',
+                email: 'user@email.com',
+                admin: false,
+            }, {
+                id:'2',
+                name: 'admin',
+                cpf: '00000',
+                email: 'admin@email.com',
+                admin: true,
+            },]
+        }
+    },
+    methods: {
+        chooseType(type) {
+            if (type) return "Admin"
+            return "Cliente"
+        }
+    }
 }
 </script>
 

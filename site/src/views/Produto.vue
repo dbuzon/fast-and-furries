@@ -3,19 +3,16 @@
         <div class="row justify-content-md-around">
             <div class="col-md-5 product">
                 
-                <img id="product-image" src="image/placeholder.jpg" alt="">
+                <img id="product-image" src="" alt="">
                 
             </div>
             <div class="col-md-5 product">
                     <h2 id="product-name"></h2>
-
                     <br>
                     <p id="product-description"></p>
                     <br>
-
                     <p><span id="product-price"></span></p>
-
-                    <input onclick="addToCart()" type="submit" value="Adicionar ao carrinho">
+                    <input @click="addToCart" type="submit" value="Adicionar ao carrinho">
             </div>                
         </div>            
     </div>
@@ -23,7 +20,20 @@
 
 <script>
 export default {
-  name: 'Produto',  
+    name: 'Produto',
+    data() {
+        return {
+            img: '',
+            name: '',
+            desc: '',
+            price: '',
+        }
+    }, 
+    methods: {
+        addToCart() {
+            alert("Produto adicionado ao carrinho")
+        }
+    } 
 }
 </script>
 

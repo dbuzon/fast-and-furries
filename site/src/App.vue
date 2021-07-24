@@ -1,11 +1,10 @@
 <template>
     <div class="content">
-        <HeaderFF v-if="SelectNavbar"></HeaderFF>
-        <nav-bar v-else></nav-bar>              
+        <HeaderFF v-show="SelectNavbar"></HeaderFF>
+        <nav-bar v-show="!SelectNavbar"></nav-bar>              
         <router-view />
     </div> 
-
-    <FooterFF v-if="!SelectNavbar"></FooterFF>
+    <FooterFF v-show="!SelectNavbar"></FooterFF>
 </template>
 
 <script>

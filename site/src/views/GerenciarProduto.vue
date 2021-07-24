@@ -21,28 +21,28 @@
                         <table>
                             <tr>
                                 <td><p> Nome: </p></td>
-                                <td> <input id="product-name" type="text"> </td>
+                                <td> <input id="product-name" type="text" v-model="name"> </td>
                             </tr>
                             <tr>
                                 <td><p> Categoria: </p></td>
-                                <td> <input id="product-category" type="text"> </td>
+                                <td> <input id="product-category" type="text" v-model="category"> </td>
                             </tr>
                             <tr>
                                 <td><p> Preço: </p></td>
-                                <td> <input id="product-price" type="text"> </td>
+                                <td> <input id="product-price" type="text" v-model="price"> </td>
                             </tr>
                             <tr>
                                 <td><p> Descrição: </p></td>
-                                <td> <input id="product-description" type="text"> </td>
+                                <td> <input id="product-description" type="text" v-model="desc"> </td>
                             </tr>
                             <tr>
                                 <td><p> Imagem: </p></td>
-                                <td> <input id="product-image" type="text"> </td>
+                                <td> <input id="product-image" type="text" v-model="img"> </td>
                             </tr>
                         </table>
                         <br>
                         <div>
-                            <input type="submit" value="Adicionar">
+                            <input type="submit" value="Adicionar" @click="addProduct($event)">
                         </div>    
                     </form>
 
@@ -50,19 +50,19 @@
                 <div class="manage-box">
                     
                     <form onsubmit="remove(event)">
-                        <div class="preco">
+                        <div>
                             <h2>Remover Produto</h2>
                         </div> 
                         <br>
                         <table>
                             <tr>
                                 <td><p> ID: </p></td>
-                                <td> <input id="product-id" type="text"> </td>
+                                <td> <input id="product-id" type="text" v-model="id"> </td>
                             </tr>
                         </table>
                         <br>
                         <div>
-                            <input type="submit" value="Remover">
+                            <input type="submit" value="Remover" @click="removeProduct($event)">
                         </div>    
                     </form>
 
@@ -74,7 +74,34 @@
 
 <script>
 export default {
-  name: 'GerenciarProduto',  
+    name: 'GerenciarProduto', 
+    data() {
+        return {
+            name: '',
+            category: '',
+            price: '',
+            desc: '',
+            img: '',
+            id: '',
+        }
+    },
+    methods: {
+        addProduct(event) {            
+            if (this.name == '' || this.category == '' || this.price == '' || this.desc == '' || this.img == '') {
+                alert("Preencha todos os campos para adicionar um produto!")
+                console.log(event)
+                event.preventDefault()                
+            }       
+            else {
+                alert("Produto " + this.name + " adicionado com sucesso!")
+                event.preventDefault()
+            }            
+        },
+        removeProduct(event) {
+            alert("Produto removido com sucesso!")
+            event.preventDefault()
+        }
+    } 
 }
 </script>
 

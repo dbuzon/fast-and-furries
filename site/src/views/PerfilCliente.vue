@@ -15,28 +15,28 @@
                 <table>
                     <tr>
                         <td><p> Nome: </p></td>
-                        <td> <input type="text"> </td>
+                        <td> <input type="text" v-model="name"> </td>
                     </tr>
                     <tr>
                         <td><p> CPF: </p></td>
-                        <td> <input type="text"> </td>
+                        <td> <input type="text" v-model="cpf"> </td>
                     </tr>
                     <tr>
                         <td><p> E-mail: </p></td>
-                        <td> <input type="text"> </td>
+                        <td> <input type="text" v-model="email"> </td>
                     </tr>
                     <tr>
                         <td><p> Endereço: </p></td>
-                        <td> <input type="text"> </td>
+                        <td> <input type="text" v-model="address"> </td>
                     </tr>
                     <tr>
                         <td><p> Telefone: </p></td>
-                        <td> <input type="text"> </td>
+                        <td> <input type="text" v-model="phone"> </td>
                     </tr>
                 </table>
                 <br>
                 <div>
-                    <input type="submit" value="Atualizar Cadastro">
+                    <input type="submit" value="Atualizar Cadastro" @click="update">
                 </div>    
             </div>           
         </div>                
@@ -45,7 +45,21 @@
 
 <script>
 export default {
-  name: 'Home',  
+    name: 'Home', 
+    data() {
+        return {
+            name: '',
+            cpf: '',
+            email: '',
+            address: '',
+            phone: '',
+        }
+    },
+    methods: {
+        update() {
+            alert("Cadastro atualizado com sucesso!")
+        }
+    }    
 }
 </script>
 

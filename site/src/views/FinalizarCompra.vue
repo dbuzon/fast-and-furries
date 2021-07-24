@@ -13,27 +13,27 @@
         <div class="row justify-content-md-left">
             <div class="col-md-12 compra">
 
-                <form onsubmit="purchase(event)">
+                <form @submit="purchase($event)">
                     <div class="preco">
-                        <p id="total-price"></p>
+                        <p>{{totalPrice}}</p>
                     </div> 
                     <br>
                     <table>
                         <tr>
                             <td><p> CPF: </p></td>
-                            <td> <input id="user-cpf" type="text"> </td>
+                            <td> <input id="user-cpf" type="text" v-model="cpf"> </td>
                         </tr>
                         <tr>
                             <td><p> Número do cartão: </p></td>
-                            <td> <input id="user-card-number" type="text"> </td>
+                            <td> <input id="user-card-number" type="text" v-model="cardNum"> </td>
                         </tr>
                         <tr>
                             <td><p> Código de segurança: </p></td>
-                            <td> <input id="user-card-secret" type="text"> </td>
+                            <td> <input id="user-card-secret" type="text" v-model="code"> </td>
                         </tr>
                         <tr>
                             <td><p> Endereço de entrega: </p></td>
-                            <td> <input id="user-address" type="text"> </td>
+                            <td> <input id="user-address" type="text" v-model="address"> </td>
                         </tr>
                     </table>
                     <br>
@@ -49,7 +49,38 @@
 
 <script>
 export default {
-  name: 'FinalizarCompra',  
+    name: 'FinalizarCompra',  
+    data() {
+        return {
+            cpf: '',
+            cardNum: '',
+            code: '',
+            address: '',
+            totalPrice: 0,
+        }
+    },
+    methods: {
+        purchase(event) {
+            event.preventDefault();
+            if (cpf.length == 0){
+                alert('O campo \'CPF\' precisa ser preenchido');
+                return;
+            }
+            if (card_number.length == 0){
+                alert('O campo  \'Número do cartão\' precisa ser preenchido');
+                return;
+            }
+            if (card_secret.length == 0){
+                alert('O campo \'Código de segurança\' precisa ser preenchido');
+                return;
+            }
+            if (address.length == 0){
+                alert('O campo \'Endereço de entrega\' precisa ser preenchido');
+                return;
+            }
+            alert("Cartão inválido!");
+        }
+    }
 }
 </script>
 

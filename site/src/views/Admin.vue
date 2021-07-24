@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-6">
                 <table>
-                    <tr><td class="pad"><img src="image/dog-solid.png" alt="produtos"></td></tr>
+                    <tr><td class="pad"><img :src="pathProduto" alt="produtos"></td></tr>
                     <tr><td>
                         <h3>Gerenciar Produtos</h3>
                         <p>Adicione ou remova produtos da loja</p>
@@ -26,7 +26,7 @@
             </div>      
             <div class="col-md-6">
                 <table>
-                    <tr><td class="pad"><img src="image/users-solid.png" alt="cliente"></td></tr>
+                    <tr><td class="pad"><img :src="pathUsuario" alt="cliente"></td></tr>
                     <tr><td>
                         <h3>Gerenciar Usuários</h3>
                         <p>Gerencie os dados e outras informações dos usuários</p>
@@ -44,7 +44,13 @@
 
 <script>
 export default {
-  name: 'Admin',  
+    name: 'Admin', 
+    data() {
+        return {
+            pathProduto: require('@/assets/images/productIcon.png'),
+            pathUsuario: require('@/assets/images/usersIcon.png'),
+        }
+    } 
 }
 </script>
 

@@ -3,16 +3,16 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="login">
-                    <form onsubmit="login(event)">
+                    <form @submit="login($event)">
 
                         <h2 class="text-center"><i class="fa fa-user"></i> Entrar</h2>
                         <br>
 
                         <p>E-mail</p>
-                        <input id="email" placeholder="seu@email.com" type="text"><br>
+                        <input id="email" placeholder="seu@email.com" type="text" v-model="email"><br>
                         <br>
                         <p>Senha</p>
-                        <input id="password" placeholder="******" type="password"><br>
+                        <input id="password" placeholder="******" type="password" v-model="password"><br>
                         <br>
                         
                         <input type="submit" value="Entrar"><br>
@@ -29,7 +29,30 @@
 
 <script>
 export default {
-  name: 'Login',  
+    name: 'Login', 
+    data() {
+        return {
+            email: '',
+            password: '',
+        }
+    }, 
+    methods: {
+        login(event) {
+            event.preventDefault()
+            if(this.email == '') {
+                alert("Email não preenchido!")
+                return
+            }
+            if (this.password == '') {
+                alert("Senha inválida!")
+                return
+            }
+            else {
+                alert("Bem vindo!")
+                window.location.href = "/perfil-cliente"
+            }             
+        }
+    }
 }
 </script>
 
