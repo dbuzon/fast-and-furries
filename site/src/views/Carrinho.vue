@@ -16,7 +16,7 @@
                 <table id="cart-table">                        
                     <tr v-for="product in products" :key="product.id">
                         <td class="image"><img :src="product.img" alt=""></td>
-                        <td class="name"><p>{{product.name}}</p></td>
+                        <td class="name"><p>{{product.title}}</p></td>
                         <td class="qtd">
                             <p>
                                 <span @click="decrease(product.id)">-</span>
