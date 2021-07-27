@@ -1,43 +1,48 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
-
-  <FooterFF></FooterFF>
+    <div class="content">
+        <HeaderFF v-show="SelectNavbar"></HeaderFF>
+        <nav-bar v-show="!SelectNavbar"></nav-bar>              
+        <router-view />
+    </div> 
+    <FooterFF v-show="!SelectNavbar"></FooterFF>
 </template>
 
 <script>
 import FooterFF from "./components/FooterFF.vue";
+import NavBar from "./components/NavBar.vue";
+import HeaderFF from "./components/HeaderFF.vue";
 
 export default {
-  components: {
-    FooterFF,
-  },
-  setup() {},
+    components: {
+        FooterFF,
+        NavBar,
+        HeaderFF,
+    },
+    setup() {},
+    
+    computed: {
+        SelectNavbar() {
+            return (this.$route.name == 'Login' || this.$route.name == 'Cadastro');
+        }
+    }
 };
 </script>
 
 <style>
+@import './assets/styles/reset.css';
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import './assets/styles/default.css';
+@import './assets/styles/mobile.css';
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+    font-family: 'RobotoS';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
 }
 
-#nav {
-  padding: 30px;
+.content {
+    flex: 1 0 auto;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'RobotoS';
+    src: url('~@/assets/font/RobotoSlab.woff') format('woff');
+}
+
+:root {
+    --rosa: #FF6DA1;
+    --rosa-escuro: #e94c88;
+    --rosa-escuro2: #da3776;
+    --rosa-escuro3: #c92061;
+    --rosa-claro: #FCE0E8;
+    --preto: #333;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Default link style */
+a{
+    color: var(--rosa);
+}
+
+a:hover{
+    color: var(--rosa-escuro);
+}
+
+/* Default input[type="text|password"] style */
+input[type="text"], input[type="password"]{
+    border-radius: 3px;
+    border:1px solid #ccc;
+    padding:5px 10px;
+}
+
+/* Default input[type="submit"] style */
+input[type="submit"]{
+    border-radius: 3px;
+    color:white;
+    background-color:var(--rosa);
+    border:none;
+    padding:6px 18px;
+    text-align: center;
+    border-bottom: 3px solid var(--rosa-escuro2);
+}
+input[type="submit"]:active{
+    border-top: 3px solid white;
+    border-bottom: none;
+}
+input[type="submit"]:hover{
+    background-color: var(--rosa-escuro);
+    border-bottom-color: var(--rosa-escuro3);
+}
+
+p{
+    font-size: 1em;
+}
+
+p, h1, h2, h3, a, input, span{
+    font-family: 'RobotoS';
+}
+
+body{
+    background-image: url("../bg10.png");
+    background-repeat: repeat;
+    background-size: 300px;
+}
