@@ -19,11 +19,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <a href="home.html?categoria=0">Ração</a>
-                                <a href="home.html?categoria=1">Brinquedos</a>
-                                <a href="home.html?categoria=2">Acessórios</a>
-                                <a href="home.html?categoria=3">Caminhas</a>
-                                <a href="home.html?categoria=4">Cosméticos</a>
+                                <router-link to="/?categoria=0">Ração</router-link>
+                                <router-link to="/?categoria=1">Brinquedos</router-link>
+                                <router-link to="/?categoria=2">Acessórios</router-link>
+                                <router-link to="/?categoria=3">Caminhas</router-link>
+                                <router-link to="/?categoria=4">Cosméticos</router-link>
                             </div>
                         </div>
                     </div>

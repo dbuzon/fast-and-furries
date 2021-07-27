@@ -34,7 +34,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <p id="total-price">{{totalPrice}}</p>
+                <p id="total-price">Preço Total: R${{totalPrice}}</p>
                 <router-link to="/finalizar-compra">
                     <input type="submit" value="Finalizar Compra">
                 </router-link>
