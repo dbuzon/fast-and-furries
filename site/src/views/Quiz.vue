@@ -125,16 +125,19 @@ export default {
                 if (this.selected[i] == 'cat') c++;
                 else if (this.selected[i] == 'dog') d++;
                 else if (this.selected[i] == 'turtle') t++;
-                else p++;
+                else if (this.selected[i] == 'parrot') p++;
             }
-            if (c+d+t+p !== 7) alert("Preencha todas as questões!");
-            else {          
+
+            if (c+d+t+p !== 7) {
+                alert("Preencha todas as questões!");
+            }  
+            else {
                 if (c >= d && c >= t && c >= p) this.result = 0;
                 else if (d >= c && d >= t && d >= p) this.result = 1;
                 else if (t >= d && t >= c && t >= p) this.result = 2;
                 else if (p >= d && p >= c && p >= t) this.result = 3;
                 this.showResult = true;
-            } 
+            }                        
         },
         refresh() {
             this.showResult = false;
