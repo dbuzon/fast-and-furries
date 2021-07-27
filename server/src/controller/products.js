@@ -3,6 +3,7 @@
 const mongoose = require('mongoose')
 
 const conn = 'mongodb+srv://fandf:h4ha_y0U-don"7_kN0w@agravain.jl2re.mongodb.net/agravain'
+
 mongoose.connect(conn, {
     useNewUrlParser: true, 
     useUnifiedTopology: true,
@@ -13,10 +14,10 @@ const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'erro de conexao: '));
 db.once('open', function(){
-	console.log('conexao estabelecida! rodando...')
+	console.log('Mongoose connected! Ya-hoo...')
 	//nessa linha aqui vc faz rodar o server (?)
 	//a database tem que estar pronta antes de poder cadastrar os produtos
-    //tentar tratar erro aqui...
+    //trata erro aqui?
 });
 
 const Schema = mongoose.Schema;
@@ -25,7 +26,8 @@ const productSchema = new Schema({
 	id: {
 		type: Number,
 		index: true,
-		unique: true
+		unique: true,
+        required: true
 	},
 	name: {
 		type: String,
@@ -74,31 +76,30 @@ exports.getById = (req, res, next) => {
         else {
             res.status(404).send();
         }
-    })
+    });
 };
 
 exports.put = (req, res, next) => {
-    //const id = req.params.id;
-    //db[id] = req.body;
-    const product = Product(req.body);
-    product.save()
-        .then((prod) => {
-            //tudo ok
-        })
-        .catch((err) => {
-            //console.log(err)
-        })
-    res.status(200).send(product);
+    const id = req.params.id;
+    let prod;
+    Product.findOne({"id":id}).then(function(product){
+        prod = product;
+    });
+    if (prod) {
+        Product.findByIdAndDelete(prod._id);
+    }
+    Product(req.body).save();
+    res.status(201).send(req.body);
 };
 
 exports.delete = (req, res, next) => {
     const id = req.params.id;
-
-    if (db.hasOwnProperty(id)) {
-        delete db[id];
-        res.status(204).send();
-    }
-    else {
-        res.status(404).send();
-    }
+    Product.findOneAndDelete({"id":id}).then(function(product){
+        if (product) {
+            res.status(204).send();
+        }
+        else {
+            res.status(404).send();
+        }
+    });
 };
