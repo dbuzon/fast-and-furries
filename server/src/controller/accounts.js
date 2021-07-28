@@ -23,15 +23,23 @@ exports.getById = (req, res, next) => {
 
 exports.put = (req, res, next) => {
     const id = req.params.id;
-    let acc;
-    Account.findOne({"id":id}).then(function(account){
-        acc = account;
+
+    Account.findOne({ "id": id }).then((account) => {
+        
+        if (account != null) {
+            Account.findByIdAndDelete(account._id).then(() => {
+                Account(req.body).save();
+                res.status(201).send(req.body);
+            });
+        }
+        else {
+            Account(req.body).save();
+            res.status(201).send(req.body);
+        }
+        
     });
-    if (acc) {
-        Account.findByIdAndDelete(acc._id);
-    }
-    Account(req.body).save();
-    res.status(201).send(req.body);
+
+
 };
 
 exports.delete = (req, res, next) => {
