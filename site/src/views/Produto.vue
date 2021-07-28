@@ -75,7 +75,7 @@ export default {
 			);
 			let product = await response.json();
 
-			this.img = require("@/assets/images/products" + product.img);
+			this.img = require("@/assets/images/products/" + product.img);
 			this.name = product.title;
 			this.desc = product.description;
 			this.price = product.price.toFixed(2);
