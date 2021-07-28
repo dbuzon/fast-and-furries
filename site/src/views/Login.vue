@@ -74,6 +74,7 @@ export default {
 						this.$cookies.set("account_id", account.id);
 
 						window.location.href = "/perfil-cliente";
+						break;
 					}
 				}
 

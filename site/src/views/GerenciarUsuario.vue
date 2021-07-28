@@ -23,6 +23,7 @@
                             <td><p>{{user.cpf}}</p></td>
                             <td><p>{{user.email}}</p></td>
                             <td>{{chooseType(user.admin)}}</td>
+                            <td><input type="submit" value="Mudar Tipo" @click="changeType(user.id)"></td>
                         </tr>                                                             
                     </table>
                 </div>
@@ -36,26 +37,39 @@ export default {
     name: 'GerenciarUsuario',  
     data() {
         return {
-            users: [{
-                id:'1',
-                name: 'user',
-                cpf: '99999',
-                email: 'user@email.com',
-                admin: false,
-            }, {
-                id:'2',
-                name: 'admin',
-                cpf: '00000',
-                email: 'admin@email.com',
-                admin: true,
-            },]
+            users: [],
         }
+    },
+    created() {
+        this.getAccounts();
     },
     methods: {
         chooseType(type) {
             if (type) return "Admin"
             return "Cliente"
-        }
+        },
+        async changeType(id) {
+            
+            for (let user of this.users) {                
+                if (user.id == id) {
+                    user.admin = !user.admin;                    
+                    fetch("http://localhost:3000/accounts/"+id, {
+                        method: "PUT",
+                        headers: {
+                            Accept: 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(user),                        
+                    });
+                    break;
+                }
+            }
+        },
+        async getAccounts() {
+            let response = await fetch("http://localhost:3000/accounts");
+			let json = await response.json();
+            this.users = json;
+        },
     }
 }
 </script>
@@ -63,7 +77,7 @@ export default {
 <style scoped>
 .manage-box{
     width: 100%;
-    max-width: 750px;
+    max-width: 900px;
     background-color: white;
     margin: 0 auto;
     margin-bottom: 60px;
