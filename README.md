@@ -140,6 +140,7 @@ Para abrir o site:
 - O programa no terminal indicará em qual local o site pode ser acessado. (Provavelmente, `localhost:8080/`)
 ![image](https://user-images.githubusercontent.com/49994083/127395719-8c480c16-0523-465a-98d1-d2c0c886a1aa.png)
 
+Existe uma conta de administrador com email `admin` e senha `admin`.
 
 ## 7. Problemas
 
