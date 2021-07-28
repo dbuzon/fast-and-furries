@@ -132,7 +132,8 @@ Para abrir o site:
 
 Alguns dos frameworks/ferramentas usados pelo grupo foram:
 - Figma (para o mockup)
-- Bootstrap 
+- Bootstrap (para o css)
 - Vue.js (front-end)
 - Mongoose (integração entre o banco de dados e o servidor)
 - MongoDB Compass (para a visualização do banco de dados)
+- Postman (para simular requisições HTTP)
