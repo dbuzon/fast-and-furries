@@ -1,32 +1,11 @@
 'use strict';
 
-const mongoose = require('mongoose');
 const Product = require('../models/products');
-const Account = require('../models/accounts');
-
-const conn = 'mongodb+srv://fandf:h4ha_y0U-don"7_kN0w@agravain.jl2re.mongodb.net/agravain'
-
-mongoose.connect(conn, {
-    useNewUrlParser: true, 
-    useUnifiedTopology: true,
-    useCreateIndex: true
-});
-
-const db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'erro de conexao: '));
-db.once('open', function(){
-	console.log('Mongoose connected! Ya-hoo...')
-	//nessa linha aqui vc faz rodar o server (?)
-	//a database tem que estar pronta antes de poder cadastrar os produtos
-    //trata erro aqui?
-});
 
 
 exports.get = (req, res, next) => {
     Product.find({}).then(function(products) {
         res.status(200).send(products);
-        //tem que tratar os erros aqui?
     });
 };
 
