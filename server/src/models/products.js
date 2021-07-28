@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
 	id: {
-		type: Number,
+		type: String,
 		index: true,
 		unique: true,
         required: true
 	},
-	name: {
+	title: {
 		type: String,
 		required: true
 	},
@@ -26,7 +26,7 @@ const productSchema = new Schema({
 		type: String,
 		required: true
 	},
-	image: {
+	img: {
 		type: String,
 		required: true
 	},
