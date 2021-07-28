@@ -6,6 +6,9 @@ Projeto da disciplina Introdução ao Desenvolvimento Web - SCC0219.
 
 O tema escolhido por nós foi desenvolver um website de um petshop virtual.
 
+**AVISO: Esse é um projeto realizado para fins educativos e tem problemas graves de segurança.
+Para mais informações, leia os [comentários](#8-comentários).**
+
 ### Autores
 
 | NUSP     | Nome                       |
@@ -49,7 +52,8 @@ O sistema é responsivo e visa uma boa acessibilidade e usabilidade para seus us
 
 ## 2. Descrição do Projeto
 
-Fast & Furries é um petshop virtual, implementado com HTML, CSS e JavaScript (até agora), que vende produtos destinados ao cuidado e ao lazer de bichinhos de estimação, como brinquedos, acessórios, caminhas e muito mais.
+Fast & Furries é um petshop virtual, que vende produtos destinados ao cuidado e ao lazer de bichinhos de estimação, como brinquedos, acessórios, caminhas e muito mais.
+Implementado com HTML, CSS, JavaScript e Vue.js no front-end, Node.js para o back-end e MongoDB para o banco de dados.
 
 ### Diagrama de navegação:
 
@@ -80,7 +84,26 @@ As funcionalidades visadas pelo nosso site são:
 
 ### Servidor
 
-As informações salvas no servidor são as que estão descritas na parte **1. Requisitos**.
+As informações salvas no servidor são:
+
+#### Contas:
+- id (identificador do cliente, valor único)
+- nome
+- email
+- senha
+- admin (booleano)
+- cpf
+- endereço
+- número de telefone
+
+#### Produtos:
+- id (identificador do produto, valor único)
+- título
+- categoria (número de 0 a 4)
+- preço
+- descrição
+- identificador da imagem
+- quantidade vendida do produto 
 
 ## 3. Comentários sobre o código
 
@@ -88,23 +111,53 @@ Usamos bootstrap para facilitar a implementação de um layout responsivo.
 
 ## 4. Plano de teste
 
-Nosso projeto foi desenvolvido e testado no Firefox e no Google Chrome, dois navegadores muito populares no mercado.
-Não utilizamos cookies no projeto, então cada vez que a página é recarregada, as informações são perdidas (por isso que o carrinho fica sempre com 3 produtos quando a página é recarregada, mesmo que removam ou adicionem itens nele). 
+Nosso projeto foi desenvolvido e testado no Firefox e no Google Chrome, dois navegadores muito populares no mercado, e nos sistemas operacionais Windows e Linux (na distribuição Manjaro).
 
 ## 5. Resultados dos testes
 
-O comportamento do site apresenta ser satisfatório nos dois navegadores testados, tendo em vista as limitações indicadas. 
+O comportamento do site apresenta ser satisfatório nos dois navegadores testados, com um tempo de resposta rápido (principalmente considerando que não foram gastos recursos financeiros para hospedar o banco de dados), layouts responsivos e consistentes durante a utilização. Na entrega final, não encontramos bugs que afetassem significativamente a experiência do usuário.
 
 ## 6. Building
 
-Para visualização do site, somente é necessário que esse repositório seja baixado. O acesso a cada página individual pode ser realizado abrindo o arquivo HTML correspondente no seu navegador preferido - As condições de teste estão indicadas na parte **4. Plano de teste**
+É necessário ter o `npm` e o `node.js` instalados. O processo de building foi testando no Linux Manjaro e no Windows (WSL)
+
+Inicialmente, é necessário baixar esse repositório. O front-end e o back-end (o site e o servidor) serão executados localmente, enquanto o banco de dados está hosteado num servidor de mongodb.
+
+Recomendamos que inicialmente, o servidor seja colocado para rodar, e em seguida, o site seja aberto.
+
+Para rodar o servidor:
+- Entre na pasta do projeto (`ProjetoWeb`)
+- `cd server/`
+- `npm install` 
+- `npm start`
+- Se tudo ocorrer bem, o server estará rodando em `localhost:3000/`.
+
+Para abrir o site:
+- Entre na pasta do projeto (`ProjetoWeb`)
+- `cd site/`
+- `npm install`
+- `npm run serve`
+- O programa no terminal indicará em qual local o site pode ser acessado. (Provavelmente, `localhost:8080/`)
+![image](https://user-images.githubusercontent.com/49994083/127395719-8c480c16-0523-465a-98d1-d2c0c886a1aa.png)
+
 
 ## 7. Problemas
 
+- **O maior problema encontrado pelos membros foi o tamanho do projeto, que foi extremamente exaustivo de ser desenvolvido, principalmente tendo em vista a preocupação com outras disciplinas e/ou estágio.**
 - Certa dificuldade de traduzir as imagens do mockup para código HTML e CSS, por causa da falta de padronização do tamanho das fontes entre as telas feitas no mockup.
-- Tempo gasto no aprendizado de novas tecnologias, como bootstrap 
+- Tempo gasto no aprendizado de novas tecnologias, como bootstrap, vue.js e node.js
 - Algumas coisas específicas de implementação de cada navegador tornam alguns bugs difíceis de serem identificados. Por exemplo, [Array.sort se comporta diferentemente em diferentes navegadores.](https://stackoverflow.com/questions/55039157/array-sort-behaves-differently-in-firefox-and-chrome-edge)
+
 
 ## 8. Comentários
 
-Os mockups foram feitos usando a ferramenta Figma.
+**A segurança da aplicação foi completamente negligenciada por fins educativos. Para fins de produção, procure alternativas mais seguras.**
+(Por exemplo, senhas estão sendo guardadas como plain text)
+
+Alguns dos frameworks/ferramentas usados pelo grupo foram:
+- Figma (para o mockup)
+- Bootstrap (para o css)
+- Vue.js (front-end)
+- Mongoose (integração entre o banco de dados e o servidor)
+- MongoDB Compass (para a visualização do banco de dados)
+- Postman (para simular requisições HTTP)

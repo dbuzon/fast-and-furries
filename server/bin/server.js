@@ -23,7 +23,7 @@ const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'Error connecting to mongoose.'));
 db.once('open', function(){
-	console.log('Mongoose connected! Ya-hoo...');
+	console.log('Mongoose connected! Ya-hoo!');
 	console.log('API is running on port ' + port)
 	server.listen(port);
 });
