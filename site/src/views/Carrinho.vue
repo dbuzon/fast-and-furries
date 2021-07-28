@@ -88,7 +88,7 @@ export default {
 
 			this.products.push({
 				id: item.id,
-				img: require("@/assets/images/" + product.img),
+				img: require("@/assets/images/products" + product.img),
 				title: product.title,
 				price: product.price,
 				quantity: item.quantity,

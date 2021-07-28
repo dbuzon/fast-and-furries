@@ -82,7 +82,7 @@ export default {
 
 				row.push({
 					id: product.id,
-					img: require("@/assets/images/" + product.img),
+					img: require("@/assets/images/products" + product.img),
 					title: product.title,
 					price: product.price,
 					category: product.category,
