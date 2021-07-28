@@ -2,8 +2,20 @@
 
 var db = {};
 
+var dbmock = [
+    {
+        id: 1,
+        nome: "admin",
+        email: "admin",
+        password: "admin",
+        cpf: "123",
+        phone: "4002-8922",
+        address: "tatui"
+    }
+]
+
 exports.get = (req, res, next) => {
-    res.status(200).send(db);
+    res.status(200).send(dbmock);
 };
 
 exports.getById = (req, res, next) => {
