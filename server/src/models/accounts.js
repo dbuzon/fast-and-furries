@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const AccountSchema = new Schema({
 	id: {
-		type: Number,
+		type: String,
 		index: true,
 		unique: true,
         required: true
@@ -27,7 +27,7 @@ const AccountSchema = new Schema({
 		default: false
 	},
 	cpf: {
-		type: Number,
+		type: String,
 		required: true
 	},
 	address: {
@@ -35,7 +35,7 @@ const AccountSchema = new Schema({
 		required: true
 	},
 	phone: {
-		type: Number,
+		type: String,
 		required: true
 	}
 
