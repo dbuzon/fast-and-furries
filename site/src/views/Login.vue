@@ -71,9 +71,8 @@ export default {
 						account.password == this.password
 					) {
 						logged = true;
-						this.$cookies.set("logged", true);
+						this.$cookies.set("account_id", account.id);
 
-						alert("Bem vindo!");
 						window.location.href = "/perfil-cliente";
 					}
 				}
