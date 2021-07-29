@@ -24,9 +24,9 @@
 							</td>
 							<td class="qtd">
 								<p>
-									<span @click="decrease(product.id)"> - </span>
+									<span @click="decrease(product.id)"> <i class="fa fa-minus" aria-hidden="true"></i> </span>
 									{{ product.quantity }}
-									<span @click="increase(product.id)"> + </span>
+									<span @click="increase(product.id)"><i class="fa fa-plus" aria-hidden="true"></i> </span>
 								</p>
 							</td>
 							<td class="price">
@@ -165,7 +165,7 @@ export default {
 
 .qtd span {
 	padding: 0 1em;
-	font-size: 1.125em;
+	cursor: pointer;
 	font-weight: bold;
 	color: var(--rosa-escuro);
 }
