@@ -16,12 +16,28 @@
 								to="/carrinho"
 								><i class="fa fa-shopping-cart"></i
 							></router-link>
-							<router-link to="/login"
-								><i class="fa fa-user"></i>
-								<span class="navbar-text"
-									>Entrar</span
-								></router-link
+
+							<router-link v-if="logged == false" to="/login">
+								<i class="fa fa-user"></i>
+								<span class="navbar-text"> Entrar</span>
+							</router-link>
+
+							<router-link
+								v-if="logged == true"
+								to="/perfil-cliente"
 							>
+								<i class="fa fa-user"></i>
+								<span class="navbar-text"> Meu Perfil</span>
+							</router-link>
+
+							<a
+								class="logout"
+								@click="logout"
+								v-if="logged == true"
+							>
+								<i class="fa fa-sign-out"></i>
+								<span class="navbar-text"> Sair</span>
+							</a>
 						</span>
 					</div>
 				</div>
@@ -51,10 +67,12 @@ export default {
 	data() {
 		return {
 			shoppingCartClass: "",
+			logged: false,
 		};
 	},
 	created() {
 		this.updateShoppingCartClass();
+		this.isLogged();
 	},
 	mounted() {
 		// Update shopping cart class when receive this message
@@ -74,11 +92,25 @@ export default {
 
 			this.shoppingCartClass = className;
 		},
+		isLogged() {
+			let accountId = this.$cookies.get("account_id");
+
+			this.logged = accountId != null;
+		},
+		logout() {
+			this.$cookies.remove("account_id");
+			window.location.href = "/";
+		},
 	},
 };
 </script>
 
 <style>
+.logout {
+	margin-left: 20px;
+	cursor: pointer;
+}
+
 .navbar-top {
 	width: 100%;
 	height: 80px;
