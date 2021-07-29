@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="cadastro">
-					<form onsubmit="signup(event)">
+					<form @submit="signup($event)">
 						<h2 class="text-center">
 							<i class="fa fa-user"></i> Cadastre-se
 						</h2>
