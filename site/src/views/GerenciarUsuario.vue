@@ -41,7 +41,8 @@ export default {
         }
     },
     created() {
-        this.getAccounts();
+        this.checkAdmin();
+        this.getAccounts(); 			
     },
     methods: {
         chooseType(type) {
@@ -70,6 +71,27 @@ export default {
 			let json = await response.json();
             this.users = json;
         },
+        async checkAdmin() {
+			let accountId = this.$cookies.get("account_id");
+			if (accountId == null) {
+				alert(
+					"Você precisa estar logado como administrador para acessar esta página."
+				);
+				window.location.href = "/";
+			} else {
+				let response = await fetch(
+					"http://localhost:3000/accounts/" + accountId
+				);
+				let account = await response.json();
+
+				if (account.admin == false) {
+					alert(
+						"Você precisa estar logado como administrador para acessar esta página."
+					);
+					window.location.href = "/";
+				}
+			}
+		},
     }
 }
 </script>
