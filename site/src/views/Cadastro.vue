@@ -117,7 +117,7 @@ export default {
 								email: this.email,
 								password: this.password,
 								address: this.address,
-								phone: "",
+								phone: "vazio",
 							};
 
 							await fetch(

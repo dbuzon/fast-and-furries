@@ -27,7 +27,16 @@
 								to="/perfil-cliente"
 							>
 								<i class="fa fa-user"></i>
-								<span class="navbar-text"> Meu Perfil</span>
+								<span class="navbar-text"> Perfil</span>
+							</router-link>
+
+							<router-link
+								class="admin"
+								v-if="isAdmin == true"
+								to="/admin"
+							>
+								<i class="fa fa-cog"></i>
+								<span class="navbar-text"> Admin</span>
 							</router-link>
 
 							<a
@@ -68,6 +77,7 @@ export default {
 		return {
 			shoppingCartClass: "",
 			logged: false,
+			isAdmin: false,
 		};
 	},
 	created() {
@@ -92,10 +102,20 @@ export default {
 
 			this.shoppingCartClass = className;
 		},
-		isLogged() {
+		async isLogged() {
 			let accountId = this.$cookies.get("account_id");
 
-			this.logged = accountId != null;
+			this.logged = false;
+			if (accountId != null) {
+				this.logged = true;
+
+				let response = await fetch(
+					"http://localhost:3000/accounts/" + accountId
+				);
+				let account = await response.json();
+
+				this.isAdmin = account.admin;
+			}
 		},
 		logout() {
 			this.$cookies.remove("account_id");
@@ -107,6 +127,11 @@ export default {
 
 <style>
 .logout {
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.admin {
 	margin-left: 20px;
 	cursor: pointer;
 }
