@@ -60,13 +60,27 @@ export default {
 			email: "",
 			address: "",
 			phone: "",
+			account: {},
 		};
 	},
 	created() {
 		this.getAccountInformation();
 	},
 	methods: {
-		update() {
+		async update() {			
+			this.account.name = this.name;
+			this.account.cpf = this.cpf;
+			this.account.email = this.email;
+			this.account.address = this.address;
+			this.account.phone = this.phone;
+			fetch("http://localhost:3000/accounts/"+this.account.id, {
+				method: "PUT",
+				headers: {
+					Accept: 'application/json',
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(this.account),                        
+            });
 			alert("Cadastro atualizado com sucesso!");
 		},
 
@@ -79,14 +93,15 @@ export default {
 				let response = await fetch(
 					"http://localhost:3000/accounts/" + accountId
 				);
-				let account = await response.json();
+				this.account = await response.json();
 
-				this.name = account.name;
-				this.cpf = account.cpf;
-				this.email = account.email;
-				this.address = account.address;
-				this.phone = account.phone;
+				this.name = this.account.name;
+				this.cpf = this.account.cpf;
+				this.email = this.account.email;
+				this.address = this.account.address;
+				this.phone = this.account.phone;				
 			}
+			
 		},
 	},
 };
