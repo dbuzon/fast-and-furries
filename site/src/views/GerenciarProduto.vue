@@ -13,12 +13,16 @@
             <div class="col-md-12">
                 <div class="manage-box">
                     
-                    <form onsubmit="add(event)">
+                    <form @submit="add(event)">
                         <div class="preco">
                             <h2>Adicionar Produto</h2>
                         </div> 
                         <br>
                         <table>
+                            <tr>
+                                <td><p> ID: </p></td>
+                                <td> <input id="product-id" type="text" v-model="idNew"> </td>
+                            </tr>
                             <tr>
                                 <td><p> Nome: </p></td>
                                 <td> <input id="product-name" type="text" v-model="name"> </td>
@@ -49,7 +53,7 @@
                 </div>
                 <div class="manage-box">
                     
-                    <form onsubmit="remove(event)">
+                    <form @submit="remove(event)">
                         <div>
                             <h2>Remover Produto</h2>
                         </div> 
@@ -59,7 +63,7 @@
                                 <td><p> ID: </p></td>
                                 <td> <input id="product-id" type="text" v-model="id"> </td>
                             </tr>
-                        </table>
+                        </table>                        
                         <br>
                         <div>
                             <input type="submit" value="Remover" @click="removeProduct($event)">
@@ -82,24 +86,47 @@ export default {
             price: '',
             desc: '',
             img: '',
+            idNew: '',
             id: '',
         }
     },
     methods: {
-        addProduct(event) {            
-            if (this.name == '' || this.category == '' || this.price == '' || this.desc == '' || this.img == '') {
-                alert("Preencha todos os campos para adicionar um produto!")
-                console.log(event)
-                event.preventDefault()                
+        async addProduct(event) {    
+            event.preventDefault()
+            if (this.name == '' || this.category == '' || this.price == '' || this.desc == '' || this.img == '' || this.idNew == -1) {
+                alert("Preencha todos os campos para adicionar um produto!")                                
             }       
             else {
                 alert("Produto " + this.name + " adicionado com sucesso!")
-                event.preventDefault()
+                await fetch("http://localhost:3000/products/"+this.idNew, {
+                    method: "PUT",
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id: Number(this.idNew),
+                        title: this.name,
+                        category: this.category,
+                        price: this.price,
+                        description: this.desc,
+                        img: this.img,
+                        sold: 0,
+                    }),                        
+                });
             }            
         },
-        removeProduct(event) {
-            alert("Produto removido com sucesso!")
-            event.preventDefault()
+        async removeProduct(event) {
+            event.preventDefault();
+            if (this.id == '') {
+                alert("Preencha o id do produto que deseja remover!")
+            }
+            else {
+                alert("Produto removido com sucesso!")
+                await fetch("http://localhost:3000/products/"+this.id, {
+                    method: "DELETE",                                       
+                });
+            }            
         }
     } 
 }
